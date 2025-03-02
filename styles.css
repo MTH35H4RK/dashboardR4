@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #1e1e1e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard {
+  display: flex;
+  width: 95%;
+  max-width: 1600px;
+  height: 90vh;
+  background: #2c2c2c;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Left Side: Dashboard Components */
+.dashboard-components {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-content: start;
+}
+
+/* Speedometer */
+.speedometer {
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.gauge {
+  width: 100px;
+  height: 100px;
+  background: #444;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.needle {
+  width: 2px;
+  height: 50px;
+  background: #ff5722;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: rotate(-45deg);
+  transition: transform 0.5s;
+}
+
+/* Motor Temperature */
+.motor-temperature {
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.temp-bar {
+  width: 100%;
+  height: 10px;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.temp-fill {
+  width: 30%;
+  height: 100%;
+  background: #ff5722;
+  transition: width 5s;
+}
+
+/* Tire Pressure */
+.tire-pressure {
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pressure {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Nearby Vehicles */
+.nearby-vehicles {
+  grid-column: span 2;
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.vehicles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.vehicle {
+  width: 30px;
+  height: 30px;
+  background: #ff5722;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Battery Status */
+.battery-status {
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.battery {
+  width: 100px;
+  height: 20px;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.battery-fill {
+  width: 80%;
+  height: 100%;
+  background: #4CAF50;
+  transition: width 5s;
+}
+
+/* Right Side: 3D Car Animation */
+#car-animation {
+  flex: 1;
+  background: #333;
+  position: relative;
+  overflow: hidden;
+}

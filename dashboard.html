@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Car Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import Map for Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.146.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.146.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Left Side: Dashboard Components -->
+    <div class="dashboard-components">
+      <!-- Speedometer -->
+      <div class="speedometer">
+        <h2>Speed</h2>
+        <div class="gauge">
+          <div class="needle"></div>
+        </div>
+        <span id="speed-value">0 km/h</span>
+      </div>
+
+      <!-- Motor Temperature -->
+      <div class="motor-temperature">
+        <h2>Motor Temp</h2>
+        <div class="temp-bar">
+          <div class="temp-fill"></div>
+        </div>
+        <span id="temp-value">30°C</span>
+      </div>
+
+      <!-- Tire Pressure -->
+      <div class="tire-pressure">
+        <h2>Tire Pressure</h2>
+        <div class="pressure">
+          <div class="tire">
+            <span>FL</span>
+            <span id="fl-pressure">35 psi</span>
+          </div>
+          <div class="tire">
+            <span>FR</span>
+            <span id="fr-pressure">35 psi</span>
+          </div>
+          <div class="tire">
+            <span>RL</span>
+            <span id="rl-pressure">35 psi</span>
+          </div>
+          <div class="tire">
+            <span>RR</span>
+            <span id="rr-pressure">35 psi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nearby Vehicles -->
+      <div class="nearby-vehicles">
+        <h2>Nearby Vehicles</h2>
+        <div class="vehicles">
+          <div class="vehicle" id="vehicle-1"></div>
+          <div class="vehicle" id="vehicle-2"></div>
+          <div class="vehicle" id="vehicle-3"></div>
+        </div>
+      </div>
+
+      <!-- Battery Status -->
+      <div class="battery-status">
+        <h2>Battery</h2>
+        <div class="battery">
+          <div class="battery-fill"></div>
+        </div>
+        <span id="battery-value">80%</span>
+      </div>
+    </div>
+
+    <!-- Right Side: 3D Car Animation -->
+    <div id="car-animation"></div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
