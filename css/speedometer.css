@@ -1,0 +1,39 @@
+body {
+  box-sizing: border-box;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0; /* Ensure no default margin */
+}
+
+.svg-container {
+  position: relative;
+  scale: 1.2;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center; /* Center the SVG horizontally */
+  align-items: center; /* Center the SVG vertically */
+  width: 100%; /* Ensure the container takes full width */
+}
+
+#speed {
+  color: white;
+  font-size: 36px;
+  line-height: 100%;
+  position: absolute;
+  top: 40%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact center */
+  z-index: 1;
+  text-align: center; /* Ensure text is centered */
+}
+
+#meter-bg-bar {
+  stroke-dasharray: 615;
+}
+
+#meter-bg-bar-bg {
+  stroke-dasharray: 615;
+}

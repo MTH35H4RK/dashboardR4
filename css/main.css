@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #1e1e1e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard {
+  display: flex;
+  width: 95%;
+  max-width: 1600px;
+  height: 90vh;
+  background: #2c2c2c;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Left Side: Dashboard Components */
+.dashboard-components {
+  flex: 1;
+  display: block;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.dashboard-componentss {
+  padding: 20px;
+  align-content: center;
+  align-items: center;
+}
+
+/* Right Side: Dashboard Components */
+.other-infos {
+  flex: 1;
+  display: block;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-content: start;
+}
+
+.other-info {
+  padding: 20px;
+}
+
+/* Motor Temperature */
+.motor-temperature {
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.temp-bar {
+  width: 100%;
+  height: 10px;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.temp-fill {
+  width: 30%;
+  height: 100%;
+  background: #ff5722;
+  transition: width 5s;
+}
+
+/* Tire Pressure */
+.tire-pressure {
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  margin: 40px;
+  margin-bottom: 65px;
+  border-radius: 10px;
+}
+
+.pressure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  margin: 20px;
+  padding: 20px;
+}
+
+.tire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Nearby Vehicles */
+.nearby-vehicles {
+  bottom: 0;
+  grid-column: span 2;
+  text-align: center;
+  background: #3a3a3a;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.vehicles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.vehicle {
+  width: 30px;
+  height: 30px;
+  background: #ff5722;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.topbar {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  align-items: left;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex; /* Use Flexbox to align items in a row */
+  align-items: center;
+  top: 0;
+  margin-bottom: 135px;
+  height: 35px;
+}
+
+#time {
+ font-size: 25px;
+ margin-left: 30px;
+}
+
+/* Battery Status */
+.battery-status {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  align-items: left;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex; /* Use Flexbox to align items in a row */
+  align-items: center;
+}
+
+.spacingbattery{
+  margin-right: 285px;
+}
+
+.battery {
+  width: 10%;
+  height: 20px;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.battery-fill {
+  width: 80%;
+  height: 100%;
+  background: #4CAF50;
+  transition: width 5s;
+}
+
+#battery-value{
+  font-size: 25px;
+}
+
+/* Right Side: 3D Car Animation */
+#car-animation {
+  flex: 1.55;
+  background: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.signalsbar{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon.active {
+  filter: brightness(0.5) sepia(1) hue-rotate(200deg);
+}
+.tably {
+  width: 200px;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+.athings {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.athings.active {
+  background-color: lightblue;
+}
